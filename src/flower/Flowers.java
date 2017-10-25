@@ -10,4 +10,6 @@ public abstract class Flowers {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public abstract void show();
 }
