@@ -2,9 +2,6 @@ import flower.Flowers;
 import flower.FlowerLoader;
 import flower.FlowerSaver;
 
-
-
-
 public class Main {
     private static final String file = "src/files/bouquet.txt";
 
@@ -21,6 +18,9 @@ public class Main {
             }
 
         FlowerSaver.save(bouquet1, file);
+        if (FlowerLoader.load(file) != null) {
+            FlowerLoader.load ( file );
+        }
     System.out.println();
         System.out.println("Incomes: " + store.getWallet());
     }}
