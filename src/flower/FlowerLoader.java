@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FlowerLoader {
-    public static Flowers []load(String file){
+    public static BaseFlower []load(String file){
         try{
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -15,7 +15,7 @@ public class FlowerLoader {
                 System.out.println(bufferedReader.readLine());
             }
             else {
-                Flowers[] bouquet = new Flowers[ Integer.parseInt ( nextLine ) ];
+                BaseFlower[] bouquet = new BaseFlower[ Integer.parseInt ( nextLine ) ];
                 for ( int i = 0 ; i < bouquet.length ; i++ ) {
                     nextLine = bufferedReader.readLine ( );
                     switch ( nextLine ) {

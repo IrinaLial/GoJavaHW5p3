@@ -1,5 +1,5 @@
+import flower.BaseFlower;
 import flower.Chamomile;
-import flower.Flowers;
 import flower.Rose;
 import flower.Tulip;
 
@@ -10,20 +10,24 @@ public class Store {
         return wallet;
     }
 
-public  Flowers[] sell(int roses,int tulips,int chamomiles) {
+public BaseFlower[] sell( int roses, int tulips, int chamomiles) {
     int s = roses + tulips + chamomiles;
-    Flowers[] bouquet = new Flowers[ s ];
+    BaseFlower[] bouquet = new BaseFlower[ s ];
 
     for ( int i = 0 ; i < bouquet.length ; i++ ) {
-        if ( i < roses ) bouquet[ i ] = new Rose ( );
-        else if ( i < ( roses + chamomiles ) ) bouquet[ i ] = new Chamomile ( );
+        if ( i < roses ) {
+            bouquet[ i ] = new Rose ( );
+        }
+        else if ( i < ( roses + chamomiles )){
+            bouquet[ i ] = new Chamomile ( );
+        }
         else bouquet[ i ] = new Tulip ( );
     }
     return ( bouquet );
 }
-    public Flowers [] sellSequence(int roses, int chamomiles, int tulips) {
+    public BaseFlower[] sellSequence( int roses, int chamomiles, int tulips) {
         int s = roses + chamomiles + tulips;
-        Flowers[] bouquet = new Flowers[ s ];
+        BaseFlower[] bouquet = new BaseFlower[ s ];
         int i = 0;
         while (i < bouquet.length) {
             if (roses > 0) {

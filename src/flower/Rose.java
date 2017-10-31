@@ -1,6 +1,6 @@
 package flower;
 
-public class Rose extends Flowers {
+public class Rose extends BaseFlower {
     public Rose ( ) {
         this.setPrice ( 100 );
     }

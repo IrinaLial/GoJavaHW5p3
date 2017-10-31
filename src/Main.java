@@ -1,4 +1,4 @@
-import flower.Flowers;
+import flower.BaseFlower;
 import flower.FlowerLoader;
 import flower.FlowerSaver;
 
@@ -7,13 +7,13 @@ public class Main {
 
     public static void main ( String[] args ){
         Store store = new Store ( );
-        Flowers[] bouquet1 = store.sell(4, 3, 5);
-        for (Flowers flower : bouquet1) {
+        BaseFlower[] bouquet1 = store.sell(4, 3, 5);
+        for (BaseFlower flower : bouquet1) {
             flower.show ( );
         }
             System.out.println();
-            Flowers[] bouquet2 = store.sellSequence(3, 5, 4);
-            for (Flowers flower : bouquet2) {
+        BaseFlower[] bouquet2 = store.sellSequence(3, 5, 4);
+            for (BaseFlower flower : bouquet2) {
                 flower.show();
             }
 
