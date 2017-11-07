@@ -6,7 +6,7 @@ public class FlowerSaver {
     public static void save ( BaseFlower[] bouquet,String file  ) {
         try {
             FileWriter fileWriter = new FileWriter ( file );
-            fileWriter.write ( bouquet.length + "\n" );
+            fileWriter.write ( bouquet.length + "\n");
 
             for ( BaseFlower flower : bouquet ) {
                 if ( flower instanceof Rose )

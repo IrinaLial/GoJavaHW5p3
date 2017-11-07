@@ -20,13 +20,13 @@ public class FlowerLoader {
                     nextLine = bufferedReader.readLine ( );
                     switch ( nextLine ) {
                         case "Rose":
-                            bouquet[ i ] = new Rose ( );
+                            bouquet[ i ] = new Rose ();
                             break;
                         case "Chamomile":
-                            bouquet[ i ] = new Chamomile ( );
+                            bouquet[ i ] = new Chamomile ();
                             break;
                         case "Tulip":
-                            bouquet[ i ] = new Tulip ( );
+                            bouquet[ i ] = new Tulip ();
                             break;
                     }
                 }
@@ -36,6 +36,8 @@ public class FlowerLoader {
             e.printStackTrace();
         }
         return null;
+
     }
+
 }
 

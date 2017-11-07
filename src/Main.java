@@ -1,6 +1,7 @@
 import flower.BaseFlower;
 import flower.FlowerLoader;
 import flower.FlowerSaver;
+import flower.Reader;
 
 public class Main {
     private static final String file = "src/files/bouquet.txt";
@@ -16,8 +17,8 @@ public class Main {
             for (BaseFlower flower : bouquet2) {
                 flower.show();
             }
-
         FlowerSaver.save(bouquet1, file);
+
         if (FlowerLoader.load(file) != null) {
             FlowerLoader.load ( file );
         }

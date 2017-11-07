@@ -1,7 +1,7 @@
 package flower;
 
 public abstract class BaseFlower {
-    private double price;
+    public  double price;
 
     public double getPrice() {
         return price;
