@@ -3,7 +3,7 @@ import flower.FlowerLoader;
 import flower.FlowerSaver;
 
 public class Main {
-    static final String file = "src/files/bouquet.txt";
+    static final String FILE = "src/files/bouquet.txt";
 
     public static void main ( String[] args ){
         Store store = new Store ( );
@@ -16,10 +16,10 @@ public class Main {
             for (BaseFlower flower : bouquet2) {
                 flower.show();
             }
-        FlowerSaver.save(bouquet1, file);
+        FlowerSaver.save(bouquet1,FILE);
 
-        if (FlowerLoader.load(file) != null) {
-            FlowerLoader.load ( file );
+        if (FlowerLoader.load(FILE) != null) {
+            FlowerLoader.load ( FILE );
         }
     System.out.println();
         System.out.println("Incomes: " + store.getWallet());
