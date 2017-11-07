@@ -1,10 +1,9 @@
 import flower.BaseFlower;
 import flower.FlowerLoader;
 import flower.FlowerSaver;
-import flower.Reader;
 
 public class Main {
-    private static final String file = "src/files/bouquet.txt";
+    static final String file = "src/files/bouquet.txt";
 
     public static void main ( String[] args ){
         Store store = new Store ( );
